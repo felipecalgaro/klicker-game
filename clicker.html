@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Klicker</title>
+    <link rel="stylesheet" href="clickercss.css">
+</head>
+
+<body id="page">
+
+    <div class="bar">
+        <div class="time-area">
+            <h1 id="time">01:02:45</h1>
+        </div>
+        <div class="money-area">
+            <h1 id="money">R$ 0</h1>
+        </div>
+        <img draggable="false" class="configs" id="config-img"
+            src="https://cdn-0.imagensemoldes.com.br/wp-content/uploads/2020/05/Desenho-Engrenagem-PNG.png"
+            alt="configs">
+    </div>
+
+    <div class="lower-bar">
+
+        <div class="klicks-bar">
+            <h1 id="klicks">Klicks: 0</h1>
+        </div>
+        <!-- <div class="klicks-per-sec-bar">
+            <h1>0 klicks/sec</h1>
+        </div> -->
+
+        <div class="configs-window">
+
+            <div id="bg-music-box"></div>
+            <div id="bg-music-box-checked">
+                <img draggable="false" class="chmrk-img"
+                    src="https://www.freeiconspng.com/thumbs/checkmark-png/black-checkmark-png-4.png">
+            </div>
+            <h3 class="music-text">Background Music</h3>
+
+            <div class="container-bgcolors">
+                <div id="red"></div>
+                <div id="dark-grey"></div>
+                <div id="green"></div>
+                <div id="orange"></div>
+                <div id="purple"></div>
+                <div id="light-grey"></div>
+            </div>
+            <h3 class="bg-color-text">Background Color</h3>
+
+        </div>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="left-bar">
+
+            <div class="store">
+                <img draggable="false" src="LOJA.png"
+                    class="store-icon" alt="store icon">
+            </div>
+
+            <div class="store-window">
+
+                <div class="page-1">
+
+                    <img id="go-to-page-2-img" src="https://icon-library.com/images/next-button-icon/next-button-icon-5.jpg">
+                    <img draggable="false" class="autoklicker-img" id="" src="AUTOKLICKER.png">
+                    <h3 class="title">AUTO-KLICKER</h3>
+                    <p class="description">Come on, you can take a nap. He does the dirty work for you.</p>
+                    <div class="upgrade-area">
+                        <div class="btn-area"><button class="btn-buy" id="buy-autoklicker" onclick="buyAutoklicker()">Buy</button></div>
+                        <div class="cost-area">
+                            <p id="cost-word-autoklicker">Cost: </p><i id="cost-autoklicker">R$999.99</i>
+                        </div>
+                    </div>
+                    <p class="bottom-description"><i>Upgrade: </i>One more auto-klicker each time. <br>
+                    <span>This power-up is not cumulative with the other ones.</span></p>
+                
+                </div>
+
+                <div class="page-2">
+                    
+                    <div class="icons-area">
+                        <img id="back-to-page-1-img" src="PREVIOUS BUTTON.png">
+                        <img id="go-to-page-3-img" src="https://icon-library.com/images/next-button-icon/next-button-icon-5.jpg">
+                    </div>
+                    <img draggable="false" class="luckyaf-img" id="" src="TREVO.png">
+                    <h3 class="title">LUCKY AF</h3>
+                    <p class="description">Increases the possibilities of the Magic Button showing up!</p>
+                    <div class="upgrade-area">
+                        <div class="btn-area"><button class="btn-buy" id="buy-luckyaf" onclick="buyLuckyaf()">Buy</button></div>
+                        <div class="cost-area">
+                            <p id="cost-word-luckyaf">Cost: </p><i id="cost-luckyaf">R$999.99</i>
+                        </div>
+                    </div>
+                    <p class="bottom-description"><i>Upgrade: </i>Even more possibilities each time. <br>
+                    <span>This power-up is not cumulative with the other ones.</span></p>
+                
+                </div>
+
+                <div class="page-3">
+
+                    <img id="back-to-page-2-img" src="PREVIOUS BUTTON.png">
+                    <img draggable="false" class="goldrush-img" id="" src="OURO.png">
+                    <h3 class="title">GOLD RUSH</h3>
+                    <p class="description">Doubles the money earned for 15 seconds. Cooldown of 1 minute.</p>
+                    <div class="upgrade-area">
+                        <div class="btn-area"><button class="btn-buy" id="buy-goldrush" onclick="buyGoldrush()">Buy</button></div>
+                        <div class="cost-area">
+                            <p id="cost-word-goldrush">Cost: </p><i id="cost-goldrush">R$999.99</i>
+                        </div>
+                    </div>
+                    <p class="bottom-description"><i>Upgrade: </i>Duration increased by 10s each time. <br>
+                    <span>This power-up is not cumulative with the other ones.</span></p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="clickable-area" id="clickable-area">
+
+            <div class="mouse-img-area">
+                <img class="mouse" draggable="false" id="" src="MOUSE.png" alt="mouse">
+            </div>
+
+            <div id="botao-magico"></div>
+
+        </div>
+
+
+        <div class="right-bar">
+
+            <div class="img-right-bar-area">
+                <img draggable="false" src="AUTOKLICKER.png" class="img-right-bar" id="autoklicker-img-right-bar" alt="autoklicker icon">
+                <div class="transparent-img" id="transparent-autoklicker"></div>
+            </div>
+
+            <div class="img-right-bar-area">
+                <img draggable="false" src="TREVO.png" class="img-right-bar" id="luckyaf-img-right-bar" alt="lucky af icon">
+                <div class="transparent-img" id="transparent-luckyaf"></div>
+            </div>
+
+            <div class="img-right-bar-area">
+                <img draggable="false" src="OURO.png" class="img-right-bar" id="goldrush-img-right-bar" alt="gold rush icon">
+                <div class="transparent-img" id="transparent-goldrush"></div>
+            </div>
+
+        </div>
+
+        <audio id="music" autoplay loop>
+            <source src="music1h.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="pop-magic-button" autoplay loop>
+            <source src="POP.mp3" type="audio/mp3">
+        </audio>
+
+        <script src="clickerjs.js"></script>
+
+</body>
+
+</html>
