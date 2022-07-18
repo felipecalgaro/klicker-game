@@ -1,4 +1,4 @@
-let money = 101001
+let money = 0
 let klicks = 0
 const mouseImage = document.querySelector('.mouse')
 
@@ -501,19 +501,5 @@ function activatePowerUp(powerUp) {
 
 
 // fazer funcionar o klicks/sec
-// // colocar som de dinheiro
+// deletar arquivos
 // // colocar uma imagem como cursr
-// // botar um video/gif na clickable-area
-// // ajustar o tempo do botao magico
-// // deixar a tela menos enjoativa
-// // ver se tudo pode começar so depois de a pagina ser carregado
-// // porque algumas vezes o alt aparece?
-// // // queria q nao desse pra arrastar a imagem do mouse (acontece as vezes)
-// // // melhorar efeitos do mouse quando clica
-// // // estilizar o botao magico
-// // // configurar os upgrades
-// // // clicar de tempo em tempo num botao espeecial q vai te dar mais dinheiro (diferenciar n de klicks do dinheiro)
-// // // fazer as configs funcionarem e estiliza-las
-// // // adicionar loja com auto clickers, etc.
-// // // botar os poderes comprados na right-bar, com cooldown (grayscale) e eles tendo efeito
-// // // // count, sequence, seq
